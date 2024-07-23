@@ -169,9 +169,6 @@ dialog {
     input {
       outline: none;
     }
-    input:user-invalid {
-      border: 1px solid red;
-    }
   }
   border: 0px;
   border-radius: 10px;
