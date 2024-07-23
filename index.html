@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="topbar">
+    <p>LIBRARY</p>
+    <button>ADD BOOK + </button>
+  </div>
+  <div id="bookshelf">
+    <div class="bookcard">
+      <p>Book Name</p>
+      <p>Author Name</p>
+      <p>Pages</p>
+      <div class="read-checkbox">
+        <label>Read</label>
+        <input type="checkbox" name="read">
+      </div>
+      <div class="remove-book">
+        <img src="/svg/close.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <dialog open>
+    <!-- <div id="modalcard"> -->
+    <form method="dialog">
+      <label for="bookname">Book Name: </label>
+      <input type="text" name="bookName" id="bookname">
+      <label for="authorname">Author Name: </label>
+      <input type="text" name="authorName" id="authrname">
+      <label for="pages">Number of Pages: </label>
+      <input type="number" min="1">
+      <button type="submit">Save</button>
+    </form>
+    <!-- </div> -->
+  </dialog>
+  <script src="script.js"></script>
+</body>
+
+</html>
