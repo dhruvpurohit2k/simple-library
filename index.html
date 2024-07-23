@@ -11,10 +11,10 @@
 <body>
   <div id="topbar">
     <p>LIBRARY</p>
-    <button>ADD BOOK + </button>
+    <button id="addbook">ADD BOOK + </button>
   </div>
   <div id="bookshelf">
-    <div class="bookcard">
+    <!-- <div class="bookcard">
       <p>Book Name</p>
       <p>Author Name</p>
       <p>Pages</p>
@@ -25,20 +25,19 @@
       <div class="remove-book">
         <img src="/svg/close.svg" alt="">
       </div>
-    </div>
+    </div> -->
   </div>
-  <dialog open>
-    <!-- <div id="modalcard"> -->
+  <dialog>
     <form method="dialog">
       <label for="bookname">Book Name: </label>
-      <input type="text" name="bookName" id="bookname">
+      <input type="text" name="bookName" id="bookname" required>
       <label for="authorname">Author Name: </label>
-      <input type="text" name="authorName" id="authrname">
+      <input type="text" name="authorName" id="authorname" required>
       <label for="pages">Number of Pages: </label>
-      <input type="number" min="1">
+      <input type="number" min="1" required id="pages">
       <button type="submit">Save</button>
     </form>
-    <!-- </div> -->
+    <!-- <button id="closemodal">close</button> -->
   </dialog>
   <script src="script.js"></script>
 </body>
