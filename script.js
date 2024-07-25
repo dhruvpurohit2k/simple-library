@@ -22,7 +22,18 @@ class Library {
     bookName.value = "";
     authorName.value = "";
     pages.value = "";
+    this.addCloseFunction();
   }
+
+  addCloseFunction() {
+    cardlist = this.bookShelfElement.querySelectorAll(".bookcard");
+    cardlist.forEach((card) => {
+      card.querySelector(".remove-book").addEventListener("click", () => {
+        card.remove();
+      })
+    })
+  }
+
 
 }
 let modal = document.querySelector("dialog");
@@ -38,14 +49,6 @@ modal.addEventListener("submit", (e) => {
   let authorname = modal.querySelector("#authorname");
   let pages = modal.querySelector("#pages");
   lib.addBook(bookname, authorname, pages);
-  // createBookCard();
-  // cardlist = document.querySelectorAll(".bookcard");
-  // console.log(cardlist);
-  // cardlist.forEach((card) => {
-  //   card.querySelector(".remove-book").addEventListener("click", () => {
-  //     card.remove();
-  //   })
-  // })
   modal.close();
 })
 
